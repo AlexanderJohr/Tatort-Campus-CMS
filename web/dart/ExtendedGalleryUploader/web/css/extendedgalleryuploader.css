@@ -1,0 +1,118 @@
+
+
+
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #333;
+}
+
+.gallerie_upload_bereich, .logo_upload_bereich, .pdf_upload_bereich {
+  min-width: 300px;
+  min-height: 300px;
+
+
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.vorschau_bild{
+
+  width: 320px;
+  height: 320px;
+
+  display: inline-block;
+  vertical-align: top;
+
+  box-shadow: inset -1px -1px 0px 0px #c6c6c6;
+}
+
+
+
+#daten{
+  padding: 10px;
+  display: inline-block;
+
+  vertical-align: top;
+
+   width: 312px;
+  height: 239px;
+ box-sizing: border-box;
+
+
+  }
+
+  #daten input{
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+#kategorie_bild{
+  display: inline-block;
+  vertical-align: top;
+
+  width: 292px;
+  height: 219px;
+
+
+
+  box-shadow: inset 0px 0px 0px 1px #c6c6c6;
+}
+
+
+
+.clicked{
+  box-shadow: inset -1px -1px 0px 0px #c6c6c6,inset 0px 0px 50px 7px #66cc11;
+}
+
+.hidden{
+    visibility: collapse;
+}
+
+.displayed{
+    visibility: visible;
+}
+  /*
+#cropper{
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+}
+
+#crop_bild_bereich{
+
+  display: inline-block;
+
+}
+
+
+
+#chosen{
+  position: absolute;
+  background-color: rgba(200,255,200, 0.5);
+   cursor: move;
+}
+
+#crop_submit{
+  display: inline-block;
+  vertical-align: top;
+
+  margin: 0 0 0 15px;
+  padding: 10px;
+
+  background-color: #ccffcc;
+}
+  */

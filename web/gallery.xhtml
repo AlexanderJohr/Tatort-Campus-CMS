@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>Events</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">
+
+            <span class="anker" id="Galerie"></span>                
+            <c:forEach begin="1" step="1" end="#{galleryPM.rows}" var="i">
+                <div class="grid-wrapper galerie" id="GalerieBox">
+
+                    <c:forEach  begin="1" step="1" end="#{galleryPM.columns}" var="j">                            
+                        <ui:fragment rendered="#{!galleryPM.allProcessed}">
+                            <c:if test="#{!galleryPM.allProcessed}"></c:if>
+                            <div class="grid-box zwei">
+                                <div class="polaroid"
+                                     style="-ms-transform: rotate(#{galleryPM.rotation}deg); transform: rotate(#{galleryPM.rotation}deg); -webkit-transform: rotate(#{galleryPM.rotation}deg);">
+                                    <a href="#{galleryPM.detailImgPath}0.jpeg" rel="lightbox[#{galleryPM.galleryID}]">
+                                        <img
+                                            alt="Bildergalerie" src="#{galleryPM.categoryImg}" title="#{contentPM.get(galleryPM.titleHtmlID)}" /></a>
+
+
+                                    <ui:repeat value="${galleryPM.detailImgs}" var="detailImg">
+                                        <a style="display: none;" rel="lightbox[#{galleryPM.galleryID}]" href="#{galleryPM.detailImgPath}#{detailImg}"> </a>                                                                                
+                                    </ui:repeat>
+                                    <div contenteditable="#{userSession.authorised}" id="#{galleryPM.titleHtmlID}"><h:outputText value="#{contentPM.get(galleryPM.titleHtmlID)}" escape="false"/></div>
+                                    <c:if test="#{userSession.authorised}">
+                                        <a href="/TatortCampusCMS/webresources/gallery/swap/#{galleryPM.order}/#{galleryPM.order + 1}" class="rest_link">&lt;</a>
+                                        <a href="/TatortCampusCMS/webresources/gallery/swap/#{galleryPM.order}/#{galleryPM.order - 1}" class="rest_link">&gt;</a>
+                                        <a href="/TatortCampusCMS/webresources/gallery/delete/#{galleryPM.galleryID}" class="rest_link">x</a></c:if>
+                                </div>
+                                #{galleryPM.next()}
+                            </div>
+
+                        </ui:fragment>
+                    </c:forEach>
+                </div>
+            </c:forEach>
+            <ui:fragment rendered='#{userSession.authorised}'><p class="upload_description">Galeriebilder hier ablegen</p></ui:fragment>   
+
+        </ui:composition>
+    </h:body>
+</html>
+

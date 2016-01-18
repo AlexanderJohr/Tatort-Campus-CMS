@@ -1,0 +1,131 @@
+.crop_chooser {
+    background-color: rgba(100, 200, 50, 0.4);
+    position: absolute;
+}
+.gallerie_uploader {
+    background: white;
+    position: fixed;
+    z-index: 100;
+    left: 1%;
+    top: 1%;
+    max-height: 98%;
+    max-width: 98%;
+    box-sizing: border-box;
+    overflow: scroll;
+    padding: 25px;
+}
+.kategorie_bild_div {
+    marginBottom: 10px;
+    display: inline-block;
+    verticalAlign: top;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.kategorie_daten_div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.kategorie_titel_textbox {
+    width: 100%;
+    box-sizing: border-box;
+}
+.gallerie_vorschau_bild {
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: inset 0px 0px 0px 1px #c6c6c6;
+}
+.gallerie_vorschau_bild:hover {
+    box-shadow: inset -1px -1px 0px 0px #c6c6c6,inset 0px 0px 50px 7px #1166cc
+}
+.gallerie_senden_label {
+    background-color: rgb(100, 200, 50);
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+}
+.gallerie_abbrechen_label {
+    background-color: rgb(200, 100, 50);
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+}
+.upload_bereich {
+    background: white;
+    position: fixed;
+    z-index: 100;
+    left: 1%;
+    top: 1%;
+    max-height: 98%;
+    max-width: 98%;
+    box-sizing: border-box;
+    overflow: scroll;
+    padding: 25px;
+}
+.crop_dialog {
+    background: white;
+    position: fixed;
+    overflow: auto;
+    z-index: 102;
+    left: 1%;
+    top: 1%;
+    padding: 25px;
+    max-height: 98%;
+    max-width: 98%;
+    box-sizing: border-box;
+}
+.crop_crop_label {
+    background-color: rgb(100, 200, 50);
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+}
+.crop_cancel_label {
+    background-color: rgb(200, 100, 50);
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0px 0px 10px;
+}
+.logo_link_textbox {
+    width: 100%;
+    box-sizing: border-box;
+}
+.logo_dialog {
+    background: white;
+    position: fixed;
+    overflow: auto;
+    z-index: 102;
+    left: 1%;
+    top: 1%;
+    padding: 25px;
+    max-height: 98%;
+    max-width: 98%;
+    box-sizing: border-box;
+}
+.logo_senden_label {
+    background-color: rgb(100, 200, 50);
+    padding: 10px;
+    margin-top: 10px;
+}
+.logo_cancel_label {
+    background-color: rgb(200, 100, 50);
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0px 0px 10px;
+}
+.seiten_inhalt_update_dialog {
+    background: white;
+    position: fixed;
+    z-index: 104;
+    right: 0px;
+    top: 0px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.update_senden_button {
+    background-color: rgb(100, 200, 50);
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}

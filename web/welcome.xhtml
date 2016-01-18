@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Events</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">
+            <!-- zeitung -->
+            <div class="grid-wrapper" id="magazine">
+                <div class="grid-box zwei">
+                    <a href="js/mozilla-pdf.js/web/viewer.html?file=../../../#{magazinPM.newestPdfPath}"> 
+                        <img id="newest_magazine" alt="Aktuelle Ausgabe" src="#{magazinPM.newestPdfImgPath}" title="Aktuelle Ausgabe" />
+                    </a>
+                </div>
+                <article  contenteditable="#{userSession.authorised}" id="indexWillkommenText" class="grid-box vier">
+                    <h:outputText value="#{contentPM.get('indexWillkommenText')}" escape="false" /></article>
+            </div>
+        </ui:composition>
+    </h:body>
+</html>
+
+
+
+
+
+

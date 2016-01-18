@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+               
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">
+            <footer>
+                <div class="grid-wrapper" id="footer_content">
+                    <div class="grid-box eins" id="sitemap">
+                        <h3>Sitemap</h3>
+                        <ul>
+                            <li><h:link class="navEl" outcome="index">Home</h:link></li>
+                            <li><h:link class="navEl" outcome="index" fragment="Events">Events</h:link></li>
+                            <li><h:link class="navEl" outcome="index"  fragment="Galerie">Galerie</h:link></li>
+                            <li><h:link class="navEl" outcome="index"  fragment="Kontakt">Kontakt</h:link></li>
+                            <li><h:link class="navEl" outcome="index"  fragment="Archiv">Archiv</h:link></li>		
+                            <li><h:link class="navEl" outcome="index"  fragment="Sponsoren">Sponsoren</h:link></li>					
+                            <li><h:link class="navEl" outcome="impressum">Impressum</h:link></li>                            
+                        </ul>
+                    </div>
+
+
+                    <article contenteditable="#{userSession.authorised}" id="footer_about_us"
+                             class="grid-box eins"> <h:outputText value="#{contentPM.get('footer_about_us')}" escape="false"/>
+                    </article> 
+
+                    <article contenteditable="#{userSession.authorised}" id="footer_contact_us"
+                             class="grid-box eins"> <h:outputText value="#{contentPM.get('footer_contact_us')}" escape="false"/>    </article>                 
+
+                    <!-- OLD <article  <%=editable%> id="footerAboutUs" class="grid-box eins">
+                        <%=m.gibInhalt("footerAboutUs")%>   </article> 
+
+                <article <%=editable%> id="footerContactUs"
+                    class="grid-box eins">
+
+                    <%=m.gibInhalt("footerContactUs")%>
+                </article> -->
+
+                    <ui:include src="mail.xhtml" />
+
+                    <div class="grid-box eins"></div>
+                </div>
+            </footer>
+        </ui:composition>
+    </h:body>
+</html>
+

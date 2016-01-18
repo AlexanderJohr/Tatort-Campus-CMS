@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./master.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="content">
+        <div id="site_wrapper">
+            <div class="grid-wrapper">
+                <div class="grid-box zwei">
+                    <h:form>
+                        <ui:fragment rendered="#{userSession.authorised}">
+                            <p>Sie sind eingeloggt</p></ui:fragment>
+                        <ui:fragment rendered="#{!userSession.authorised}">
+                            <p>Sie sind ausgeloggt</p></ui:fragment>
+                        <h:message for="user_name_field" />
+                        <p>Benutzername:</p>
+                        <h:inputText id="user_name_field" value="#{loginPM.userName}" required="true"
+                                     requiredMessage="hier Beschreibung eingeben"/>
+                        <h:message for="password_field" />
+
+                        <p>Passwort:</p>
+                        <h:inputSecret id="password_field" value="#{loginPM.password}"  required="true"
+                                     requiredMessage="hier Beschreibung eingeben" />
+
+                        <h:commandButton action="#{userSession.login(loginPM.userName, loginPM.password)}"
+                                         value="login" rendered="#{!userSession.authorised}" />
+                        <h:commandButton action="#{userSession.logout()}" 
+                                         value="logout" rendered="#{userSession.authorised}"   />           
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

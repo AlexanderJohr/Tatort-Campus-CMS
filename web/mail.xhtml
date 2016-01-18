@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+                
+        <title>Mail</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">            
+            <div class="grid-box zwei">
+                <span class="anker" id="Kontakt"></span>
+                
+                <!--
+                <script type="text/javascript">
+            function sendMail() {
+    var link = "mailto:tatort.campus.mailserver@gmail.com"
+             + "?cc=johr@hotmail.de;"
+             + "%26subject=" + escape("Tatort Campus Mail") + ";" +
+             + "%26body=" + escape(document.getElementById('email_name').value) + " (" + escape(document.getElementById('email_mail').value) + ") schrieb: " + escape(document.getElementById('email_text').value)
+    ;
+
+    window.location.href = link;
+}
+        </script>
+                <form class="footercontent">
+                    <input id="email_name" maxlength="30" value="#{emailPM.name}"/>
+                    <input id="email_mail" maxlength="30" value="#{emailPM.mail}" style="float: right;"/>
+                    <textarea id="email_text" rows="6" value="#{emailPM.message}"/>
+                    <button value="Senden"  onclick="sendMail(); return false" >senden</button>   action="#{emailPM.send()}"
+                    <h:messages globalOnly="true"/>
+                </form>
+                -->
+            </div>
+        </ui:composition>
+        
+    </h:body>
+    
+    
+</html>
+

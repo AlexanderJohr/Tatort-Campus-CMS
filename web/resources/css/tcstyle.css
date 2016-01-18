@@ -1,0 +1,714 @@
+/*-------------------------------------------
+                                             basic
+                                                  ------------------*/
+
+/*--
+ *      html elements
+                        --*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #3b3a39 url('../img/bg.png') repeat;
+    color: white;
+    font-family: "Georgia", serif;
+    line-height: 1.3;
+}
+
+h1 {
+    font: 2.2em "Rockwell", serif;
+    line-height: 3em;
+}
+
+h2 {
+    font: 1.6em "Rockwell", serif;
+    line-height: 1.4em;
+}
+
+h3 {
+    font: 1.1em "Rockwell", serif;
+    margin-bottom: 14px;
+}
+
+a {
+    color: #dc770b;
+    text-decoration: none;
+}
+
+#footer_content a {
+    color: #126b73;
+}
+
+a:focus {
+    color: #f5c462;
+}
+
+#footer_content a:hover {
+    color: orange;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: #f5c462;
+}
+
+header {
+    background: transparent url('../img/header_bg.png') center repeat-x;
+    color: white;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+header div {
+    background: transparent url('../img/header.png') center no-repeat;
+    color: white;
+    height: 100%;
+    width: 1100px;
+}
+
+nav {
+    background: #dc770b url('../img/nav.png') repeat;
+    color: #3b3a39;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 99;
+}
+
+footer {
+    background-color: #b8b8b8;
+    background-image: url('../img/footer_bg.jpg');
+    background-position: top;
+    background-repeat: repeat-x;
+    color: #3b3a39;
+    width: 100%;
+}
+
+footer p {
+    font: 12px "Rockwell", serif;
+}
+
+/* ---------------------------------------------------------------- */
+
+/*--
+ *      classes
+                        --*/
+.grid-wrapper {
+    box-sizing: border-box;
+    display: table;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.grid-wrapper .grid-box {
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: table-cell;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.grid-wrapper .grid-box.eins {
+    width: 16.6666666666%;
+}
+
+.grid-wrapper .grid-box.zwei {
+    width: 33.3333333333%;
+}
+
+.grid-wrapper .grid-box.drei {
+    width: 50%;
+}
+
+.grid-wrapper .grid-box.vier {
+    width: 66.6666666666%;
+}
+
+.grid-wrapper .grid-box.fuenf {
+    width: 83.3333333333%;
+}
+
+/* -- anker -- */
+.anker {
+    position: absolute;
+    visibility: hidden;
+    margin-top: -165px;
+}
+
+/* -- events -- */
+
+.events .zwei {
+    text-align: center;
+}
+
+.event-box {
+    background-color: #414141;
+    border: 1px solid #222220;
+    border-radius: 22px;
+    color: white;
+    height: 337px;
+    max-width: 337px;
+    margin: 21px auto;    
+}
+
+.event-box article {
+    padding: 15px 19px;
+}
+
+.event-box-top {
+    background-image: linear-gradient(top, #f3ab5e 0%, #d0853a 25%, #bf732a 50%, #ab5e18 75%);
+    background-image: -moz-linear-gradient(top, #f3ab5e 0%, #d0853a 25%, #bf732a 50%, #ab5e18
+        75%);
+    background-image: -o-linear-gradient(top, #f3ab5e 0%, #d0853a 25%, #bf732a 50%, #ab5e18
+        75%);
+    background-image: -webkit-linear-gradient(top, #f3ab5e 0%, #d0853a 25%, #bf732a 50%,
+        #ab5e18 75%);
+    background-color: #dc770b;
+    border-bottom: 2px solid #252523;
+    border-radius: 22px 22px 0px 0px;
+    color: white;
+    height: 50px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.event-box-content p {
+    font-size: 0.9em;
+
+    text-align: justify;
+
+}
+
+/* -- galerie -- */
+.galerie {
+    background: transparent url('../img/galerie_bg.png') bottom;
+    color: #3b3a39;
+    padding-top: 40px;
+}
+
+.polaroid {
+    background: transparent url('../img/polaroid.png') center no-repeat;
+    color: #3b3a39;
+    height: 380px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.polaroid img {
+    height: 259px;
+    margin-top: 15px;
+    width: 283px;
+}
+
+.polaroid p {
+    background-color: transparent;
+    color: #3b3a39;
+    margin-top: 10px;
+}
+
+/* -- sponsoren -- */
+.grid-wrapper .grid-box.sponsor {
+    margin: 20px;
+    vertical-align: middle;
+}
+
+.sponsor div {
+    background-color: white;
+    border-radius: 22px;
+    color: #3b3a39;
+    height: 90px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.sl{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* -- footer -- */
+.footercontent {
+    font: 0.8em "Georgia", serif;
+}
+
+p.footercontent {
+    font-size: 0.7em;
+}
+
+.footercontent  input[type="text"],.footercontent textarea {
+    background-color: #dcdcdc;
+    border: thin solid #969696;
+    border-radius: 5px;
+    color: #858585;
+    font: 1em "Georgia", serif;
+    margin-bottom: 10px;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.footercontent input[type="text"] {
+    box-sizing: border-box;
+    width: 48%;
+}
+
+.footercontent input[type="text"]:focus,.footercontent input[type="text"]:active
+{
+    background-color: white;
+    color: #3b3a39;
+}
+
+.footercontent textarea {
+    box-sizing: border-box;    
+    padding: 3px;
+    resize: none;
+    width: 100%;
+}
+
+.footercontent textarea:focus {
+    background-color: white;
+    color: #3b3a39;
+}
+
+.footercontent input[type="submit"] {
+    background-color: #dcdcdc;
+    border: thin solid #969696;
+    border-radius: 5px;
+    color: #858585;
+    cursor: pointer;
+    font: 1em "Georgia", serif;
+    height: 29px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.footercontent input[type="submit"]:focus {
+    background-color: #f5c462;
+    color: #3b3a39;
+}
+
+.footercontent input[type="submit"]:hover {
+    background-color: #dc770b;
+    color: #3b3a39;
+}
+
+.footercontent input[type="submit"]:active {
+    background-color: #f5c462;
+    color: #3b3a39;
+}
+
+/* ---------------------------------------------------------------- */
+
+/*--
+ *      id's
+                        --*/
+#site_wrapper {
+    margin: 0 auto;
+    width: 1100px;
+    padding-bottom: 20px;
+}
+
+/* -- navigation -- */
+#navi {
+    border: solid #ee9900; /*#f5af63*/
+    border-width: 0px 1px;
+    font: 1.324em "Rockwell", serif;
+    height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 1070px; /* 1100px - 15 - 15 */
+}
+
+#navi .grid-box {
+    padding: 0;
+}
+
+#navi span.first {
+    border-left: 1px solid transparent;
+}
+
+#navi span.last {
+    border-right: 1px solid transparent;
+}
+
+#navi a span {
+    border-left: 1px solid #dd2200;
+    border-right: 1px solid orange;
+    display: inline-block;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+#navi a.navEl {
+    background: transparent;
+    color: #3b3a39;
+    display: block;
+    line-height: 100%;
+    height: 41px;
+    padding-top: 12px;
+    width: 100%;
+}
+
+#navi a:hover.navEl {
+    background-color: #f5af63;
+    color: #3b3a39;
+}
+
+#navi a:focus.navEl,#navi a:active.navEl {
+    background-color: #f5c462;
+    color: #126b73;
+}
+
+a.navEl#Aktiv {
+    background-color: #f5af63;
+    color: #126b73;
+}
+
+a.navEl:hover#Aktiv {
+    background-color: #f5af63;
+    color: #126b73;
+}
+
+a.navEl:focus#Aktiv,a.navEl:active#Aktiv {
+    background-color: #f5af63;
+    color: #126b73;
+}
+
+
+
+#Home {
+    background-color: transparent;
+    color: #3b3a39;
+    height: 162px;
+}
+
+/* -- zeitung -- */
+#magazine {
+    background: transparent url('../img/zeitung_bg.png') center;
+    color: white;
+    height: 588px;
+    padding-top: 60px;
+}
+
+#magazine div.zwei {
+    text-align: left;
+}
+
+#magazine article {	
+    vertical-align: top;
+}
+
+#magazine h1 {
+    float: left;
+}
+
+#magazine a#facebook {
+    float: right;
+}
+
+#magazine p {
+    clear: both;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+#newest_magazine{
+    width: 100%;
+}
+
+/* -- events -- */
+#events_box {
+    background: transparent url('../img/events_bg.png') repeat;
+    color: white;
+}
+
+/* -- galerie -- */
+#galleries_box {
+    background-position: top;
+    width: 1100px;
+}
+
+/* -- archiv -- */
+#magazines_box {
+    background: transparent url('../img/archiv_bg.png');
+    color: white;	
+}
+
+#magazines_box .vier {
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* -- sponsoren -- */
+#content_footer {
+    background-image: url('../img/sponsoren_bg-top.png');
+    background-color: #858585;
+    background-position: top;
+    background-repeat: repeat-x;
+    color: #3b3a39;
+    /*height: 400px;*/
+    /*padding-top: 180px;*/
+}
+
+#logo_box>.grid-wrapper {
+    margin: 25px 0;
+}
+
+#logo_box {
+    margin: 0 auto;
+    width: 1100px;
+    padding: 10px 0;
+}
+
+/* -- footer -- */
+#footer_content {
+    background-image: url('../img/footerbox_bg.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    margin: 0 auto;
+    width: 1100px;
+}
+
+#sitemap ul {
+    line-height: 24px;
+    list-style-type: none;
+    padding-top: 3px;
+}
+
+/*-------------------------------------------
+                                             events
+                                                  ------------------*/
+div.eventtext {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+div.eventtext .vier {
+    background: transparent url('../img/eventtext_bg.png') bottom no-repeat;
+    color: white;
+}
+
+div.eventtext p {
+    padding-top: 10px;
+}
+
+span.eventtext {
+    position: absolute;
+    visibility: hidden;
+}
+
+#Eventrubrik {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+
+/*-------------------------------------------
+                                             sponsoren
+                                                  ------------------*/
+#Beschreibung {
+    vertical-align: top;
+}
+
+/*-------------------------------------------
+                                             impressum
+                                                  ------------------*/
+.contact {
+    margin-bottom: 30px;
+}
+
+.contact ul {
+    line-height: 22px;
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+#Impressum {
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+#Kontaktinfo {
+    background: transparent url('../img/zeitung_bg.png') bottom no-repeat;
+    color: white;
+    height: 635px;
+}
+
+#disclaimer {
+    padding-top: 20px;
+}
+
+#disclaimer article {
+    padding-top: 30px;
+    width: 1070px;
+}
+
+#disclaimer p {
+    padding-top: 5px;
+}
+
+/*-------------------------------------------
+                                             kontakt
+                                                  ------------------*/
+#Kontaktformular {
+    padding-top: 20px;
+    width: 520px;
+}
+
+#Kontaktformular fieldset {
+    border: none;
+    padding: 10px 20px 25px 0px;
+}
+
+#Kontaktformular label {
+    display: block;
+    line-height: 26px;
+}
+
+#Kontaktformular ol {
+    list-style-type: none;
+}
+
+#Kontaktformular li {
+    float: left;
+    padding: 10px 20px 10px 0px;
+}
+
+#Kontaktformular li#LastLi {
+    clear: both;
+    float: none;
+    text-align: right;
+}
+
+#Kontaktformular input,#Kontaktformular textarea {
+    background-color: #dcdcdc;
+    border: 1px solid #b3b3b3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #e2e2e2, inset 1px 1px 4px #e2e2e2;
+    color: #8d8d8d;
+    font: 0.813em "Georgia", serif;
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 1px 1px 4px #e2e2e2, inset 1px 1px 4px #e2e2e2;
+    padding: 8px 12px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 4px #e2e2e2, inset 1px 1px 4px #e2e2e2;
+    width: 190px;
+}
+
+#Kontaktformular input:focus,#Kontaktformular textarea:focus {
+    background-color: white;
+    color: #4d4d4d;
+}
+
+#Kontaktformular input:active,#Kontaktformular textarea:active {
+    background-color: white;
+    color: #4d4d4d;
+}
+
+#Kontaktformular textarea {
+    overflow-x: hidden;
+    overflow-y: auto;
+    resize: none;
+    width: 425px;
+}
+
+#Kontaktformular input[type="submit"] {
+    background: linear-gradient(top, #dc770b, #cb660a);
+    background: -moz-linear-gradient(top, #dc770b, #cb660a);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #dc770b),
+        color-stop(1, #cb660a) );
+    background-color: #dc770b;
+    border: 1px solid #4d4d4d;
+    border-radius: 0px;
+    box-shadow: 1px 0 0 #cb660a, -1px 0 0 #cb660a, 0 1px 0 #cb660a, 0 -1px 0
+        #cb660a, 0 5px 10px -5px #666;
+    color: #3b3a39;
+    cursor: pointer;
+    float: left;
+    font: 1em Georgia, serif;
+    -moz-border-radius: 0px;
+    -moz-box-shadow: 1px 0 0 #cb660a, -1px 0 0 #cb660a, 0 1px 0 #cb660a, 0
+        -1px 0 #cb660a, 0 5px 10px -5px #666;
+    padding: 5px 10px;
+    -webkit-border-radius: 0px;
+    -webkit-box-shadow: 1px 0 0 #cb660a, -1px 0 0 #cb660a, 0 1px 0 #cb660a,
+        0 -1px 0 #cb660a, 0 5px 10px -5px #666;
+    width: auto;
+}
+
+#Kontaktformular input[type="submit"]:hover {
+    background: linear-gradient(top, #cb660a, #dc770b);
+    background: -moz-linear-gradient(top, #cb660a, #dc770b);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cb660a),
+        color-stop(1, #dc770b) );
+    background: #cb660a;
+    color: #e4b351;
+}
+
+#Kontaktformular input[type="submit"]:active {
+    background-color: #cb660a;
+    color: #126b73;
+}
+
+/* Buttons */
+
+.loeschen_link{
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    background-color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: hand; 
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 10px;
+}
+.loeschen_link:hover{
+    background-color: red;
+}
+
+
+
+.rest_link{
+    display: inline-block;
+    padding: 1px 10px;
+    color: white;
+    background-color: #dc770b ;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: hand; 
+    cursor: pointer;
+    font-weight: bolder;
+    margin: 5px;
+    font-size: 30px;
+}
+
+.rest_link:hover{
+    background-color: red;
+}
+
+.upload_description{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(255, 165, 0);
+}

@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+        <title>Events</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">
+                <ui:fragment rendered="#{userSession.authorised}">
+                <a class="rest_link" href="/TatortCampusCMS/webresources/event/insert">neues Event</a></ui:fragment>
+                
+                <span class="anker" id="Events"></span>
+
+                <c:forEach begin="1" step="1" end="#{eventPM.rows}" var="i">
+                    <div class="grid-wrapper events">
+                        <c:forEach  begin="1" step="1" end="#{eventPM.columns}" var="j">                            
+                            <ui:fragment rendered="#{!eventPM.allProcessed}">
+                                <div class="grid-box zwei">
+                                    <div class="event-box">
+                                        <div  contenteditable="#{userSession.authorised}" id="#{eventPM.eventTitelHtmlID}"
+                                              class="event-box-top">                                        
+                                            <h:outputText value="#{contentPM.get(eventPM.eventTitelHtmlID)}" escape="false"/>
+                                        </div>
+                                        <article  contenteditable="#{userSession.authorised}"  id="#{eventPM.eventTextHtmlID}"
+                                                  class="event-box-content">
+                                            <h:outputText value="#{contentPM.get(eventPM.eventTextHtmlID)}" escape="false"/>                                        
+                                        </article>
+                                    </div>
+                                    <ui:fragment rendered="#{userSession.authorised}">                                        
+                                        <a href="/TatortCampusCMS/webresources/event/swap/#{eventPM.order}/#{eventPM.order + 1}" class="rest_link">&lt;</a>
+                                        <a href="/TatortCampusCMS/webresources/event/swap/#{eventPM.order}/#{eventPM.order - 1}" class="rest_link">&gt;</a>
+                                        <a href="/TatortCampusCMS/webresources/event/delete/#{eventPM.eventID}" class="rest_link">x</a></ui:fragment>
+                                </div>
+                                #{eventPM.next()}
+                            </ui:fragment>
+                        </c:forEach>
+                    </div>
+                </c:forEach>
+           
+        </ui:composition>
+    </h:body>
+</html>
+

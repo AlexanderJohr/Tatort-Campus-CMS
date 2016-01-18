@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./master.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+
+    <ui:define name="content">
+        <div id="site_wrapper">
+            <!-- impressum -->
+
+            <div class="grid-wrapper" id="Impressum">
+
+                <div id="Kontaktinfo">
+                    <h1>Impressum</h1>
+
+                    <div   contenteditable="#{userSession.authorised}"   id="contact_info_tatort_campus" class="contact">
+                        <h:outputText value="#{contentPM.get('contact_info_tatort_campus')}" escape="false"/>                     
+                    </div>
+
+                    <div   contenteditable="#{userSession.authorised}"   id="contact_info_editorial_staff" class="contact">
+                        <h:outputText value="#{contentPM.get('contact_info_editorial_staff')}" escape="false"/>
+                    </div>
+
+                    <div   contenteditable="#{userSession.authorised}"   id="contact_info_development" class="contact">
+                        <h:outputText value="#{contentPM.get('contact_info_development')}" escape="false"/>                        
+                    </div>
+
+                </div> <!-- end kontaktinfo -->
+
+                <article  contenteditable="#{userSession.authorised}"  id="disclaimer">
+                    <h:outputText value="#{contentPM.get('disclaimer')}" escape="false"/>      
+                </article>
+            </div>
+        </div>        
+    </ui:define>
+
+</ui:composition>

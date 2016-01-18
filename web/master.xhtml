@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <h:head>
+        <h:outputStylesheet library="css" name="tcstyle.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+
+        <title>Tatort Campus</title>
+        <meta content="Die kostenlose Studierendenzeitung 'Tatort Campus' ist eine studentische Initiative des Studienrates der Hochschule Harz. In verschiedenen Rubriken beschäftigt sich die engangierte Redaktion, mit regionalen, hochschulgebundenen und studienrelevanten Themen."
+              name="description" />
+        <meta content="Robert Rogosik" name="author" />
+        <meta content="Tatort Campus, Studierendenzeitschrift, Hochschule Harz, Wernigerode" name="keywords" />
+
+        <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta content="index, follow" name="robots" />
+        <script src="js/lightbox/js/jquery-1.7.2.min.js"></script>
+
+        <!-- flexslider -->
+        <link href="js/flexslider.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery.flexslider.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            window.setInterval(function() {
+                jQuery('.flexslider').flexslider();
+            }, 100);
+        </script>
+
+        <!-- lightbox2 -->
+        <script src="js/lightbox/js/lightbox.js"></script>
+        <link href="js/lightbox/css/lightbox.css" rel="stylesheet" />
+        <c:if test="#{userSession.authorised}">
+            <script type="application/dart" src="dart/ExtendedGalleryUploader/web/main.dart"></script>
+            <script src="dart/ExtendedGalleryUploader/packages/browser/dart.js"></script>
+            <link rel="stylesheet" href="dart/ExtendedGalleryUploader/web/css/style.css"/>
+            <script src="js/ckeditor/ckeditor.js"></script><!-- CK Editor -->
+        </c:if>
+    </h:head>
+
+    <h:body>
+        <div id="header" class="top">            
+            <ui:include src="header.xhtml"/>
+        </div>
+        <div id="content" class="center_content">            
+            <ui:insert name="content">content</ui:insert>
+        </div>
+        <div id="content_footer" class="logo_upload_bereich">
+            <div id="logos_box"><ui:include src="logos.xhtml" /></div>
+        </div>
+        <div id="footer" class="center_content">
+            <ui:include src="footer.xhtml"/>
+        </div>
+    </h:body>
+</html>

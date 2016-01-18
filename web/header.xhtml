@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition xmlns="http://www.w3.org/1999/xhtml">
+            <!-- header -->
+            <header>
+                <div class="grid-wrapper"></div>
+            </header>
+
+            <!-- navigation -->
+            <nav>
+                <div class="grid-wrapper" id="navi">
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index"><span class="first">Home</span></h:link>
+                    </div>
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index" fragment="Archiv"><span>Archiv</span></h:link>
+                    </div>
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index" fragment="Events"><span>Events</span></h:link>
+                    </div>
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index"  fragment="Galerie"><span>Galerie</span></h:link>
+                    </div>
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index"  fragment="Kontakt"><span>Kontakt</span></h:link>
+                    </div>
+                    <div class="grid-box eins">
+                        <h:link class="navEl" outcome="index"  fragment="Sponsoren"><span class="last">Sponsoren</span></h:link>
+                    </div>
+                </div>
+            </nav>
+            <!-- placeholder -->
+            <div id="Home"></div>
+        </ui:composition>
+    </h:body>
+</html>
+
